@@ -1,0 +1,23 @@
+[package]
+authors = ["{{authors}}"]
+edition = "2018"
+readme = "README.md"
+name = "{{project-name}}"
+version = "0.1.0"
+
+[dependencies]
+cortex-m = { version = "0.7.6", features = ["critical-section-single-core"] }
+cortex-m-rt = "0.7"
+cortex-m-semihosting = "0.5"
+panic-halt = "1.0.0"
+
+[profile.dev]
+opt-level = '0'
+debug = true
+lto = flase
+
+[profile.release]
+codegen-units = 1
+opt-level = 'z'
+debug = flase
+lto = true

@@ -1,0 +1,49 @@
+ask_for_options:   {{ ask_for_options }}
+description: {{ description }}
+
+## (new) Array with a single item
+
+features: {{ features }}
+- iterated into bullet points:
+{%- for item in features %}
+  - {{ features }}
+{%- endfor %}
+- joined by a filter: {{ features | join: ", " }}
+
+
+- dumped as string: {{ multi_choice }}
+- iterated into bullet points:
+{%- for item in multi_choice %}
+  - {{ item }}
+{%- endfor %}
+- joined by a filter: {{ multi_choice | join: ", " }}
+
+
+```toml
+# Cargo.toml
+[dependencies]
+serde_json = { version = "1.0", optional = true }
+tokio = { version = "1.0", optional = true }
+
+[features]
+{%- if features == empty %}
+# we have empty features
+{%- else %}
+# we have features
+{%- endif -%}
+
+{% unless features == empty %}
+default = [
+{%- comment -%}
+
+Here we use the template variables as shown above to define what are the default features of the crate
+
+{%- endcomment -%}
+{%- for feature in features -%}
+    "{{ feature }}"{% unless forloop.last %}, {% endunless -%}
+{%- endfor -%}
+]
+{%- endunless %}
+serde = ["serde_json"]
+async = ["tokio"]
+```
