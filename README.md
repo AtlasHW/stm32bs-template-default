@@ -63,12 +63,14 @@ The template files system is as following
   - build.rs
   - memory.x
   - .cargo/
-	 └─	config.toml
+  -  └─	config.toml
   - src/
-     └─ main.rs
+  -  └─ main.rs
   - demo/
-     ├─ demo1.rs
-	 └─ demo2.rs
+  -  ├─ demo1.rs
+  -  └─ demo2.rs
+  - ProductsList.csv
+  - pac_info.csv
 
 
 # License
@@ -96,4 +98,4 @@ to intervene to uphold that code of conduct.
 
 [CoC]: https://www.rust-lang.org/policies/code-of-conduct
 [team]: https://github.com/rust-embedded/wg#the-cortex-m-team
-[atlas email]: atlask.songk@gmail.com
+[atlas email]: atlas.songk@gmail.com
