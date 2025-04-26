@@ -71,6 +71,28 @@ The template files system is as following
   -  └─ demo2.rs
   - ProductsList.csv
   - pac_info.csv
+  
+## variables in template
+
+- for project with BSP
+ 
+- for empty project
+
+1. authors 
+2. target
+3. pac_name
+4. pac_ver
+5. pac_featrue
+6. flash_origin
+7. flash_size
+8. ram1_origin
+9. ram1_size
+10. pn
+
+
+- for demo project
+
+ 
 
 
 # License
