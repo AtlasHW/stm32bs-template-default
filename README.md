@@ -6,8 +6,7 @@
 
 > The template for building applications for STM32 microcontrollers
 
-This project is modifyed and maintained by the [Atlas Song Kai]
-[atlas.song-k@gmail.com].
+This project is modifyed and maintained by the [Atlas Song Kai][atlas email].
 The origin project is developed and maintained by the [Cortex-M team][team].
 
 ## Dependencies
@@ -97,3 +96,4 @@ to intervene to uphold that code of conduct.
 
 [CoC]: https://www.rust-lang.org/policies/code-of-conduct
 [team]: https://github.com/rust-embedded/wg#the-cortex-m-team
+[atlas email]: atlask.songk@gmail.com
