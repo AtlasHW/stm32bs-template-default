@@ -10,6 +10,7 @@ cortex-m = { version = "0.7.6", features = ["critical-section-single-core"] }
 cortex-m-rt = "0.7"
 cortex-m-semihosting = "0.5"
 panic-halt = "1.0.0"
+{{STM32Family}} = { version = "{{pac_ver}}", features = ["rt", "{{pac_feature}}"]}
 
 [profile.dev]
 opt-level = '0'
