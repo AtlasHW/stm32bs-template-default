@@ -72,7 +72,7 @@ The template files system is as following
   - ProductsList.csv
   - pac_info.csv
   
-## variables in template
+## Variables in template
 
 - for project with BSP
  
