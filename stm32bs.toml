@@ -3,32 +3,10 @@ cargo_generate_version = ">=0.0.1"
 include = ["README.md"]
 
 [hooks]
-init = ["init_script.rhai"]
+# init = ["init_script.rhai"]
 
 [placeholders]
 description = { type = "string", prompt = "Description for the crate?" }
 username = { type = "string", prompt = "Name for the user?" }
 
-target =  {prompt = "Target Selection?", choices = [
-    "thumbv6m-none-eabi",
-    "thumbv7m-none-eabi",
-    "thumbv7em-none-eabi",
-    "thumbv7em-none-eabihf",
-    "thumbv8m.base-none-eabi",
-    "thumbv8m.main-none-eabi",
-    "thumbv8m.main-none-eabihf",
-], type = "string" }
 
-ask_for_options = { type = "bool", prompt = "Make a choice too?", default = true }
-features = { prompt = "Include features?", choices = [
-    "serde",
-    "async",
-], default = [
-    "serde",
-], type = "array" }
-
-[conditional.'ask_for_options'.placeholders.multi_choice]
-type = "array"
-prompt = "Please select one or more..."
-choices = ["A", "B", "C", "D"]
-default = ["B", "C"]
