@@ -13,12 +13,12 @@ panic-halt = "1.0.0"
 {{pac_name}} = { version = "{{pac_ver}}", features = ["rt", "{{pac_feature}}"]}
 
 [profile.dev]
-opt-level = '0'
+opt-level = 0
 debug = true
-lto = flase
+lto = false
 
 [profile.release]
 codegen-units = 1
 opt-level = 'z'
-debug = flase
+debug = false
 lto = true
