@@ -6,7 +6,13 @@ include = ["README.md"]
 # init = ["init_script.rhai"]
 
 [placeholders]
-description = { type = "string", prompt = "Description for the crate?" }
+description = { type = "string", prompt = '"Description" for the crate?' }
 username = { type = "string", prompt = "Name for the user?" }
+
+[demo.'hello']
+
+[demo.'blink']
+port = { type="string", prompt="Port of GPIO is used to LED", choices = ["GPIOA", "GPIOB", "GPIOC", "GPIOD", "GPIOE", "GPIOF"]}
+pin = { type="string", prompt="Pin of GPIO is used to LED", choices = ["0", "1", "2", "3", "4", "5", "6", "7", "8", "9", "10", "11", "12", "13", "14", "15"]}
 
 
