@@ -6,7 +6,6 @@ include = ["README.md"]
 # init = ["init_script.rhai"]
 
 [placeholders]
-description = { type = "string", prompt = '"Description" for the crate?' }
 username = { type = "string", prompt = "Name for the user?" }
 
 [demo.'hello']
