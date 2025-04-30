@@ -15,15 +15,26 @@ fn main() -> ! {
     let dp = stm32::Peripherals::take().unwrap();
 
     let mut delay = Delay::new(cp.SYST, {{ HSI_freq }});
-    let gpiob = dp.GPIOB;
-    dp.RCC.iopenr.modify(|_, w| w.iopben().set_bit());
-    gpiob.moder.modify(|_, w| w.moder5().output());
-    gpiob.otyper.modify(|_, w| w.ot5().push_pull());
+    let gpio{{ port | downcase }} = dp.GPIO{{ port | upcase }};
+	
+{% if pac_name == 'stm32g0' %}
+
+    dp.RCC.iopenr.modify(|_, w| w.iop{{ port | downcase }}en().set_bit());
+    gpio{{ port | downcase }}.moder.modify(|_, w| w.moder{{ pin }}().output());
+    gpio{{ port | downcase }}.otyper.modify(|_, w| w.ot{{ pin }}().push_pull());
+
+{% elsif pac_name == 'stm32f0' %}
+	{% if pin >= 8 %}
+	//High bits
+	{% else %}
+	// Low bits
+	{% endif %}
+{% endif %}
 
     loop {
-        gpiob.odr.modify(|_, w| w.odr5().set_bit());
+        gpio{{ port | downcase }}.odr.modify(|_, w| w.odr{{ pin }}().set_bit());
         delay.delay_ms(500);
-        gpiob.odr.modify(|_, w| w.odr5().clear_bit());
+        gpio{{ port | downcase }}.odr.modify(|_, w| w.odr{{ pin }}().clear_bit());
         delay.delay_ms(500);
     }
 }
