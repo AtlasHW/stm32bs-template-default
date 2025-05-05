@@ -37,7 +37,7 @@ programs, check [the embedded Rust book][book].
 1. Instantiate the template.
 
 ``` console
-$ cargo stm32bs --git template_path
+$ cargo stm32bs
 🤷 Project Name: app
 🤷 Chip Part Number (eg. stm32g071cbt6): stm32f103c8t6
 ✔ 🤷 Choose a project type · Empty Project
