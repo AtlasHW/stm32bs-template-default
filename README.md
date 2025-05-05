@@ -23,8 +23,7 @@ To build stm32 programs using this template you'll need:
   targets. Run:
 
 ``` console
-$ rustup target add thumbv6m-none-eabi thumbv7m-none-eabi thumbv7em-none-eabi thumbv7em-none-eabihf thumbv8m.base-none-eabi thumbv8m.main-none-eabi 
-thumbv8m.main-none-eabihf
+$ rustup target add thumbv6m-none-eabi thumbv7m-none-eabi thumbv7em-none-eabi thumbv7em-none-eabihf thumbv8m.base-none-eabi thumbv8m.main-none-eabi thumbv8m.main-none-eabihf
 ```
 
 ## Using this template
@@ -39,9 +38,21 @@ programs, check [the embedded Rust book][book].
 
 ``` console
 $ cargo stm32bs --git template_path
- Project Name: app
- Creating project called `app`...
- Done! New project created /tmp/app
+🤷 Project Name: app
+🤷 Chip Part Number (eg. stm32g071cbt6): stm32f103c8t6
+✔ 🤷 Choose a project type · Empty Project
+Create a Empty STM32 Project...
+🔧 Destination: /home/atlassong-k/rust/cargo-stm32bs/app ...
+🔧 project-name: app ...
+🔧 username: "atlasHW" (placeholder provided by cli argument)
+🔧 Generating template ...
+[1/6]   Done: Cargo.toml
+[2/6]   Done: src/main.rs
+[3/6]   Done: build.rs
+[4/6]   Done: .cargo/config.toml
+[5/6]   Done: memory.x
+[6/6]   Done: README.md
+✨ Done! New project created /home/atlassong-k/rust/cargo-stm32bs/app
 
 $ cd app
 ```
@@ -92,7 +103,7 @@ The template files system is as following
 
 - for demo project
 
- 
+your placeholder on your demo configuration
 
 
 # License

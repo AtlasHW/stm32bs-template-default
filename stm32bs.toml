@@ -11,7 +11,7 @@ username = { type = "string", prompt = "Name for the user?" }
 [demo.'hello']
 
 [demo.'blink']
-port = { type="string", prompt="Port of GPIO is used to LED, eg. B", regex = "^[a-fA-F]$"}
+port = { type="string", prompt="Port of GPIO is used to LED, eg. B", regex = "^[a-iA-I]$"}
 pin = { type="integer", prompt="Pin of GPIO is used to LED, eg. 5", range = [0, 15] }
 
 
