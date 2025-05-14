@@ -4,7 +4,7 @@ MEMORY
   /* TODO Adjust these memory regions to match your device memory layout */
   /* These values correspond to the LM3S6965, one of the few devices QEMU can emulate */
   FLASH : ORIGIN = {{ flash_origin }}, LENGTH = {{ flash_size }}K
-  RAM : ORIGIN = {{ ram1_origin }}, LENGTH = {{ ram1_size }}K
+  RAM : ORIGIN = {{ ram_origin }}, LENGTH = {{ ram_size }}K
 }
 
 /* This is where the call stack will be allocated. */
